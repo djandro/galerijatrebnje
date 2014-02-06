@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+	<name>Slovenian Language Pack</name>
+	<packagename>sl-SI</packagename>
+	<version>08-11-13</version>
+	<url>http://www.slojoomla.si</url>
+	<packager>slo-team</packager>
+	<packagerurl>http://www.slojoomla.si</packagerurl>
+    <description><![CDATA[
+<div align="center">
+      </tr>
+<table border="0" width="99%">
+  	    <tr>
+  		    
+  </tr>
+</table>
+
+	<div align="center">
+	<table border="0" width="99%">
+  	    <tr>
+  		    <td colspan="3">
+  		      <div align="center" class="style6">
+               
+  		        <h3 align="left" class="style9 style2" style="color: #009900;" span>Slovenski prevod Joomle  (skrbništvo+ospredje) datum: 2013-november</h3>
+  		      </div>
+	      <hr />  		    </td>
+</tr>
+
+  		    <td width="9%" height="106"><div align="center" class="style6"><span class="style3" style="color: #009900;"><span style="color: #0066FF;"><span class="style1"><img src="http://www.slojoomla.si/images/stories/prevodi2.5.ga.png" title="sl-SI Joomla 2.5" width="109" height="104" /></span></span></span></div></td>
+
+  		    <td width="14%"><p align="left" class="style6"><span class="style4" style="color: #009900;"">Združljivo z:</span></p>
+  		      <p align="left" class="style6"><span class="style4" style="color: #009900;""><span class="style4" style="color: #009900;">Različica prevoda:</span></span></p>
+  		      <p align="left" class="style6"><span class="style4" style="color: #009900;">Datoteke:</span></p></td>
+  		    
+  		    <td width="77%" colspan="5"><p class="style6"><img width="80" height="16" src="http://www.slojoomla.si/images/stories/zdruzljivost/compat_16_native.png" title="Joomla 2.5" /><img src="http://www.slojoomla.si/images/stories/zdruzljivost/compat_17.png" alt="" width="80" height="16" title="Joomla 2.5" /><img src="http://www.slojoomla.si/images/stories/zdruzljivost/compat_25.png" alt="" width="80" height="16" title="Joomla 2.5" /><img src="http://www.slojoomla.si/images/stories/zdruzljivost/compat_30.png" alt="" width="80" height="16" title="Joomla 2.5" /></p>
+  		      <p class="style6"><span class="style3" style="color: #0066FF;">v_08-11-13 </span></p>
+  		      <p class="style6"><span class="style3" style="color: #0066FF;">admin_sl-SI.zip in site_sl-SI.zip</span></p></td>
+ 
+  		    </tr>
+  	    <tr>
+  		    <td height="22" colspan="3"><span class="style3"><span class="style6 style7" style="color: #009900;"><span style="color: #0066FF;">AVTORJI PREVODOV:</span></span></span>
+  		      <div align="left" class="style6 style3"><span style="color: #0066FF;">Joomla 1.6:</span><span class="style4 style3" style="color: #009900;"><span class="style8" style="color: #0066FF;"><span class="style4 style3" style="color: #009900;"><span class="style8" style="color: #0066FF;"> <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_rupar_mini.png" title="prevodi Rupar" height="16" width="16" />=Rupar,</span></span><img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_iztok_mini.png" title="prevodi Iztok" height="16" width="16" />=Iztok, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_max_mini.png" title="prevodi Max" height="16" width="16" />=Max, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_joze_mini.png" title="prevodi Jože" height="16" width="16" />=Jože, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_mitja_mini.png" title="prevodi Mitja" height="16" width="16" />=Mitja, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_slo_mini.png" title="prevodi slo-team" height="16" width="16" />=Duško, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_chico_mini.png" title="prevodi Chico" height="16" width="16" />=Chico, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_boki_mini.png" title="prevodi Boki" height="16" width="16" />=Boki, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_pino_mini.png" title="prevodi Pino" height="16" width="16" />=Pino, <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_jaka_mini.png" title="prevodi Jaka" height="16" width="16" />=Jaka</span></span></div>  		      
+  		      <div align="left" class="style3"></div></td>
+      </tr>
+  	    <tr>
+  		    <td colspan="3"><div align="left" class="style6 style3"><span style="color: #0066FF;">Joomla 1.7:</span><span class="style4 style3" style="color: #009900;"><span class="style8" style="color: #0066FF;"><span class="style8" style="color: #0066FF;"> <span class="style4 style3" style="color: #009900;"><span class="style8" style="color: #0066FF;"><span class="style8" style="color: #0066FF;"><img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_slo_mini.png" title="prevodi slo-team" height="16" width="16" /></span></span></span><img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_chico_mini.png" title="prevodi Chico" height="16" width="16" /></span></span></span></div> </td>
+      </tr>
+  	    <tr>
+  		    <td colspan="3"><div align="left" class="style6 style3"><span style="color: #0066FF;">Joomla 2.5:</span><span class="style8" style="color: #0066FF;"><span class="style8" style="color: #0066FF;"> <img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_slo_mini.png" title="prevodi slo-team" height="16" width="16" /></span> <span class="style8" style="color: #0066FF;"><img src="http://www.slojoomla.si/images/stories/mini_znaki/ext_chico_mini.png" title="prevodi Chico" height="16" width="16" /></span></span></div>  		      </td>
+      </tr>
+  	    <tr>
+  		    <td colspan="3">  		      <div align="left" class="style6 style3"><span style="color: #0066FF;">Joomla 3.1/2:</span><img src="http://www.botra.si/slo.team/slo-team.png" width="150" height="10"/></div></td>
+      </tr>
+  	    <tr>
+  		    <td colspan="3">  		      <div align="left" class="style6 style3"><span style="color: #0066FF;">Joomla 3.5:</span><img src="http://www.botra.si/slo.team/slo-team.png" width="150" height="10"/></div></td>      </tr>
+  	    <tr>
+  	      <td height="40" colspan="3"><p class="style6 style3"><span style="color: #FF0000;">Priporočamo, da  redno preverjate če obstaja novejša različica prevoda.</span></p>          </td>
+      </tr>
+  	    <tr>
+  		    <td height="44" colspan="3"><p class="style3"><span class="style4 style7" style="color: #0066FF;">Joomla slovensko spletišče TOP spletne domene za pomoč uporabnikom:</span>  <span class="style6"><span style="color: #0066FF;"><a href="http://www.slojoomla.si" target="_blank">| slojoomla.si | </a></span><a href="http://www.sijoomla.com" target="_blank"> sijoomla.com |</a></span></p>	        </td>
+      </tr>
+</table>    </div>]]>
+</description>
+	<files>
+		<file type="language" client="site" id="sl-SI">site_sl-SI.zip</file>
+		<file type="language" client="administrator" id="sl-SI">admin_sl-SI.zip</file>
+	</files>
+</extension> 
