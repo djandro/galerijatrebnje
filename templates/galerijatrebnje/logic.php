@@ -79,8 +79,9 @@ if ($foundation==1) :
   $doc->addScript($tpath.'/js/foundation.min.js');
 endif;
 if ($bootstrap==1) :
-  $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
-  $doc->addScript($tpath.'/js/jquery-noconflict.js');
+  // zakomentiran jquery,ker je ze po defaultu joomle vkjucen v head
+  //$doc->addScript($tpath.'/js/jquery-1.10.2.min.js');
+  //$doc->addScript($tpath.'/js/jquery-noconflict.js');
   $doc->addScript($tpath.'/js/bootstrap.min.js');
 endif;
 if ($jquery==1) $doc->addScript($tpath.'/js/jquery-1.10.2.min.js');

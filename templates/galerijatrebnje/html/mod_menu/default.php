@@ -10,17 +10,17 @@
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
-$last_level_one_id = 0;
+/*$last_level_one_id = 0;
 for($j=count($list); $j>0; $j--){
 	if($list[$j]->level == 1){
 		$last_level_one_id = $list[$j]->id;
 		break;
 	}
-}
+}*/
 $first_start = true;
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav menu<?php echo $class_sfx;?>"<?php
+<ul class="nav nav-pills menu<?php echo $class_sfx;?>"<?php
 	$tag = '';
 	if ($params->get('tag_id') != null)
 	{
@@ -63,9 +63,9 @@ foreach ($list as $i => &$item) :
 		$class .= ' first';
 		$first_start = false;
 	}
-	if ($item->shallower || $item == end($list) || $item->id == $last_level_one_id ) {
+	/*if ($item->shallower || $item == end($list) || $item->id == $last_level_one_id ) {
 		$class .= ' last';
-	}
+	}*/
 
 	if ($item->deeper)
 	{

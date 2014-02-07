@@ -1,6 +1,8 @@
 <?php defined( '_JEXEC' ) or die; 
 
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
+require_once('snippet/main.php');
+
 
 ?><!doctype html>
 <!--[if IEMobile]><html class="iemobile" lang="<?php echo $this->language; ?>"> <![endif]-->
@@ -26,10 +28,121 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; // load logic.php
   
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('page')).' '.$active->alias.' '.$pageclass; ?>">
   
-  <!-- 
-    YOUR CODE HERE
-  -->
-  <jdoc:include type="modules" name="debug" />
+      <div class="container-logo">
+      	
+        <div id="logo" class="hidden-xs hidden-sm">
+            <jdoc:include type="modules" name="logo" />
+        </div> <!-- /logo -->
+        
+      	<div class="container">
+              <div class="header">
+              	
+                <?php if($this->countModules('topleft or topright')) : ?> 
+                <div class="top row">
+                	<?php if($this->countModules('topleft')) : ?> 
+                	<div id="topleft" class="col-md-3">
+                    	<jdoc:include type="modules" name="topleft" />
+                    </div>
+                    <?php endif; ?>
+                    <?php if($this->countModules('topright')) : ?> 
+                	<div id="topright" class="col-md-3 col-md-offset-<?php echo $topoffsetwidth; ?>">
+                    	<jdoc:include type="modules" name="topright" />
+                    </div>
+                    <?php endif; ?>
+                </div> <!-- /top -->
+                <?php endif; ?>
+              
+              	<h1 class="heading"><?php echo $app->getCfg('sitename'); ?></h1>
+
+                <div id="menu" class="row">
+                	<div class="col-md-12">
+                    	<jdoc:include type="modules" name="menu" />
+                    </div>
+                </div> <!-- /menu -->
+                
+              </div> <!-- /header -->
+        		
+              <?php if($this->countModules('slider')) : ?>  
+              <div id="slider" class="row">
+              	<div class="col-md-12">
+                	<jdoc:include type="modules" name="slider" />
+                </div>
+              </div> <!-- /slider -->
+			  <?php endif; ?>
+        		
+              <?php if ($this->countModules( 'maintop1 or maintop2 or maintop3 or maintop4' )) : ?>  
+              <div class="maintop row">
+				<?php if ($this->countModules('maintop1')) {?>
+				<div id="maintop1" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop1" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('maintop2')) {?>
+				<div id="maintop2" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop2" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('maintop3')) {?>
+				<div id="maintop3" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop3" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('maintop4')) {?>
+				<div id="maintop4" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop4" style="xhtml" /> </div><?php } ?>              </div> <!-- /maintop -->
+              <?php endif; ?>
+              
+              <!-- content -->
+              <div class="content row">
+              	
+                <?php if($this->countModules('left')) : ?>
+              	<div id="left" class="col-md-4">
+                	<jdoc:include type="modules" name="left" style="xhtml" />
+                </div>
+                <?php endif; ?>
+                
+              	<div id="content" class="col-md-<?php echo $contentwidth; ?>">
+                	<?php if($this->countModules('contenttop')) : ?>
+                	<jdoc:include type="modules" name="contenttop" style="xhtml" />
+                    <?php endif; ?>
+                    
+                    <div id="component">
+                        <jdoc:include type="modules" name="debug" />
+                        <jdoc:include type="message" />
+                        <jdoc:include type="component" />
+                    </div>
+                    
+                    <?php if($this->countModules('contentbottom')) : ?>
+                    <jdoc:include type="modules" name="contentbottom" style="xhtml" />
+                    <?php endif; ?>
+                </div>
+                
+                <?php if($this->countModules('right')) : ?>
+              	<div id="right" class="col-md-4">
+                	<jdoc:include type="modules" name="right" style="xhtml" />
+                </div>
+                <?php endif; ?>
+                
+              </div> <!-- /content -->
+              
+              
+              <?php if ($this->countModules( 'mainbottom1 or mainbottom2 or mainbottom3 or mainbottom4' )) : ?>  
+              <div class="mainbottom row">
+				<?php if ($this->countModules('mainbottom1')) {?>
+				<div id="mainbottom1" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom1" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('mainbottom2')) {?>
+				<div id="mainbottom2" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom2" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('mainbottom3')) {?>
+				<div id="mainbottom3" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom3" style="xhtml" /> </div><?php } ?>
+				<?php if ($this->countModules('mainbottom4')) {?>
+				<div id="mainbottom4" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom4" style="xhtml" /> </div><?php } ?>              </div> <!-- /mainbottom -->
+              <?php endif; ?>              
+        
+              <div class="footer row">
+              	<div class="col-md-4">
+                	Delovanje nam omogočajo...
+                </div>
+              	<div class="col-md-4">
+                	<p>&copy; Galerija likovnih samorastnikov Trebnje 2014</p>
+                </div>
+              	<div class="col-md-4">
+                	Poiščite nas tudi FB.icon, Youtube.icon
+                </div>
+                
+              </div> <!-- /footer -->
+		</div> <!-- /container -->
+    </div> <!-- /container-logo -->
+  
 </body>
 
 </html>

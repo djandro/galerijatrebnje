@@ -2,33 +2,43 @@
 @import 'normalize.less';
 
 // bootstrap
-//@import 'bootstrap/bootstrap.less';
+@import 'bootstrap/bootstrap.less';
 
 // font awesome 
 //@import 'font-awesome/font-awesome.less';
 
 
-
-// colors
-@white: #FFFFFF;
-
-
-
-/* FRONTEND LESS
+/* GALERIJATREBNJE LESS
 *********************************************/
 html {
   overflow-y: scroll;
 }
 body {
-	background-color:@white;
+	background:url(../images/bg.jpg);
 }
 
 
 
 /* LAYOUT
 *********************************************/
-
-
+.container-logo{
+	position:relative;
+	max-width:1300px;
+	margin:0 auto;
+}
+.container{
+	max-width:970px;
+}
+.heading{
+	text-align:center;
+}
+#logo{
+	position:absolute;
+}
+#topleft{}
+#topright{
+	text-align:right;
+}
 
 /* HELPER
 *********************************************/
