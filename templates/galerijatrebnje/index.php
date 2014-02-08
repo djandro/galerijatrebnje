@@ -34,6 +34,9 @@ require_once('snippet/main.php');
             <jdoc:include type="modules" name="logo" />
         </div> <!-- /logo -->
         
+        <div class="krivulja hidden-xs hidden-sm"></div>
+        <div class="copic hidden-xs hidden-sm"></div>
+        
       	<div class="container">
               <div class="header">
               	
@@ -52,7 +55,7 @@ require_once('snippet/main.php');
                 </div> <!-- /top -->
                 <?php endif; ?>
               
-              	<h1 class="heading"><?php echo $app->getCfg('sitename'); ?></h1>
+              	<h1 class="heading"><a href="/"><?php echo $app->getCfg('sitename'); ?></a></h1>
 
                 <div id="menu" class="row">
                 	<div class="col-md-12">
@@ -63,7 +66,7 @@ require_once('snippet/main.php');
               </div> <!-- /header -->
         		
               <?php if($this->countModules('slider')) : ?>  
-              <div id="slider" class="row">
+              <div id="slider" class="shadow row">
               	<div class="col-md-12">
                 	<jdoc:include type="modules" name="slider" />
                 </div>
@@ -91,7 +94,7 @@ require_once('snippet/main.php');
                 </div>
                 <?php endif; ?>
                 
-              	<div id="content" class="col-md-<?php echo $contentwidth; ?>">
+              	<div id="content" class="box col-md-<?php echo $contentwidth; ?>">
                 	<?php if($this->countModules('contenttop')) : ?>
                 	<jdoc:include type="modules" name="contenttop" style="xhtml" />
                     <?php endif; ?>

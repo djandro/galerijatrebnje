@@ -7,6 +7,10 @@
 // font awesome 
 //@import 'font-awesome/font-awesome.less';
 
+@import "bootstrap/mixins.less";
+
+@projectColor1:		#005496;
+@gutter:			25px;
 
 /* GALERIJATREBNJE LESS
 *********************************************/
@@ -14,7 +18,7 @@ html {
   overflow-y: scroll;
 }
 body {
-	background:url(../images/bg.jpg);
+	background:#e9e2d6 url(../images/bg-big.jpg) fixed center center;
 }
 
 
@@ -24,21 +28,113 @@ body {
 .container-logo{
 	position:relative;
 	max-width:1300px;
-	margin:0 auto;
+	.center-block();
 }
 .container{
 	max-width:970px;
 }
 .heading{
+	font-size:42px;
+	color:@projectColor1;
+	letter-spacing:3.5px;
 	text-align:center;
+	font-weight:bold;
+	
+	a:hover{
+	color:@projectColor1;
+	text-decoration:none;
+	}
 }
 #logo{
 	position:absolute;
+	left:35px;
+	top:15px;
+	img{ max-width:115px; }
 }
-#topleft{}
+.krivulja{
+	.size(1133px; 53px);
+	background:url(../images/krivulja.png) no-repeat bottom center;
+	position:absolute;
+	z-index:3;
+	top:145px;
+	left:3%;
+}
+.copic{
+	.size(157px; 160px);
+	background:url(../images/copic.png) center center no-repeat;
+	position:absolute;
+	z-index:3;
+	top:22px;
+	right:3%;
+}
+.top{ padding-top:10px; }
 #topright{
 	text-align:right;
+	padding-right:0px;
 }
+#slider, #menu{
+	.col-md-12{
+		padding:0px;
+	}
+}
+#slider{ margin-bottom:@gutter; }
+#menu{
+	min-height:76px;
+}
+.nav{
+	li > a span{ 
+		text-transform:uppercase;
+		font-size:13px;
+		font-weight:bold; 
+	}
+	li > a{ padding:10px 4.8px; }
+}
+.shadow{
+	.box-shadow(4px 4px 5px #888888);
+}
+.box{
+	background-color: #fff;
+	.box-sizing(border-box);
+	.shadow;
+	.border-right-radius(10px);
+	.border-bottom-radius(10px);
+}
+.footer{
+	font-size:12px;
+	font-weight:bold;
+	color:@projectColor1;
+	margin:20px 0px;
+}
+
+
+/* mod-language */
+div.mod-languages{
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style:none;
+		font-size:12px;
+	}
+ 	li { margin: 0px 5px; }
+	ul.lang-inline li {
+		display:inline;
+		border-right: 1px solid @projectColor1;
+		&:first-child{ padding-right:5px; }
+		&:last-child{ border:none; }
+	}
+	ul.lang-block li { display:block; }
+	img { border:none; }
+	a {
+		text-decoration: underline;
+		&:hover{ text-decoration:none; }
+	}
+	.lang-active a {
+		text-decoration: none;
+		&:hover{ color:@projectColor1; }
+	}
+}
+/* end mod-language */
+
 
 /* HELPER
 *********************************************/

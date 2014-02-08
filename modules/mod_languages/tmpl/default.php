@@ -9,7 +9,8 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('stylesheet', 'mod_languages/template.css', array(), true);
+// css datoteka dodana v template galerijatrebnje folder
+//JHtml::_('stylesheet', 'mod_languages/template.css', array(), true);
 ?>
 <div class="mod-languages<?php echo $moduleclass_sfx ?>">
 <?php if ($headerText) : ?>
