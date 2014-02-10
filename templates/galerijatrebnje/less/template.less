@@ -10,7 +10,9 @@
 @import "bootstrap/mixins.less";
 
 @projectColor1:		#005496;
-@gutter:			25px;
+@bg-box-color:		#fff;
+@gutter:			15px;
+@moduleRadius:		10px;
 
 /* GALERIJATREBNJE LESS
 *********************************************/
@@ -72,12 +74,18 @@ body {
 	text-align:right;
 	padding-right:0px;
 }
-#slider, #menu{
-	.col-md-12{
+#slider, #menu, .content, .maintop, .mainbottom{
+	> [class*="col-md-"]{
 		padding:0px;
+		
+		.modulewrapper{
+			margin-bottom:@gutter;
+			&:last-child{ margin-bottom:0px; }
+		}		
 	}
+
 }
-#slider{ margin-bottom:@gutter; }
+#slider{ margin-bottom:@gutter + 10; }
 #menu{
 	min-height:76px;
 }
@@ -92,13 +100,41 @@ body {
 .shadow{
 	.box-shadow(4px 4px 5px #888888);
 }
-.box{
-	background-color: #fff;
+.box, .moduletable{
+	background-color: @bg-box-color;
 	.box-sizing(border-box);
+	padding: 0px @gutter @gutter;
+	position:relative;
 	.shadow;
-	.border-right-radius(10px);
-	.border-bottom-radius(10px);
+	.border-right-radius(@moduleRadius);
+	.border-bottom-radius(@moduleRadius);
+	
+	h3{
+		font-size:14px;
+		text-transform:uppercase;
+		background-color: @projectColor1;
+		color:#fff;
+		width:100%;
+		padding:6px 20px;
+		margin-top:0px;
+		position:absolute;
+		left:0px;
+		border-top-right-radius:@moduleRadius;
+	}
+	.modulcontent{ padding-top:40px; }
 }
+
+#left .modulewrapper{ margin-right: @gutter; }
+#right .modulewrapper{ margin-left: @gutter; }
+
+.maintop, .mainbottom{
+	.modulewrapper{ margin: @gutter 0px @gutter @gutter; }
+	
+	> [class*=col-md-]{
+		&:first-child .modulewrapper{ margin-left:0px; }
+	}
+}
+
 .footer{
 	font-size:12px;
 	font-weight:bold;

@@ -6358,9 +6358,26 @@ body {
   text-align: right;
   padding-right: 0px;
 }
-#slider .col-md-12,
-#menu .col-md-12 {
+#slider > [class*="col-md-"],
+#menu > [class*="col-md-"],
+.content > [class*="col-md-"],
+.maintop > [class*="col-md-"],
+.mainbottom > [class*="col-md-"] {
   padding: 0px;
+}
+#slider > [class*="col-md-"] .modulewrapper,
+#menu > [class*="col-md-"] .modulewrapper,
+.content > [class*="col-md-"] .modulewrapper,
+.maintop > [class*="col-md-"] .modulewrapper,
+.mainbottom > [class*="col-md-"] .modulewrapper {
+  margin-bottom: 15px;
+}
+#slider > [class*="col-md-"] .modulewrapper:last-child,
+#menu > [class*="col-md-"] .modulewrapper:last-child,
+.content > [class*="col-md-"] .modulewrapper:last-child,
+.maintop > [class*="col-md-"] .modulewrapper:last-child,
+.mainbottom > [class*="col-md-"] .modulewrapper:last-child {
+  margin-bottom: 0px;
 }
 #slider {
   margin-bottom: 25px;
@@ -6380,16 +6397,50 @@ body {
   -webkit-box-shadow: 4px 4px 5px #888888;
   box-shadow: 4px 4px 5px #888888;
 }
-.box {
-  background-color: #fff;
+.box,
+.moduletable {
+  background-color: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0px 15px 15px;
+  position: relative;
   -webkit-box-shadow: 4px 4px 5px #888888;
   box-shadow: 4px 4px 5px #888888;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.box h3,
+.moduletable h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #005496;
+  color: #fff;
+  width: 100%;
+  padding: 6px 20px;
+  margin-top: 0px;
+  position: absolute;
+  left: 0px;
+  border-top-right-radius: 10px;
+}
+.box .modulcontent,
+.moduletable .modulcontent {
+  padding-top: 40px;
+}
+#left .modulewrapper {
+  margin-right: 15px;
+}
+#right .modulewrapper {
+  margin-left: 15px;
+}
+.maintop .modulewrapper,
+.mainbottom .modulewrapper {
+  margin: 15px 0px 15px 15px;
+}
+.maintop > [class*=col-md-]:first-child .modulewrapper,
+.mainbottom > [class*=col-md-]:first-child .modulewrapper {
+  margin-left: 0px;
 }
 .footer {
   font-size: 12px;

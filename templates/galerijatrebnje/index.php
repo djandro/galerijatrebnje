@@ -76,13 +76,13 @@ require_once('snippet/main.php');
               <?php if ($this->countModules( 'maintop1 or maintop2 or maintop3 or maintop4' )) : ?>  
               <div class="maintop row">
 				<?php if ($this->countModules('maintop1')) {?>
-				<div id="maintop1" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop1" style="xhtml" /> </div><?php } ?>
+				<div id="maintop1" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop1" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('maintop2')) {?>
-				<div id="maintop2" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop2" style="xhtml" /> </div><?php } ?>
+				<div id="maintop2" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop2" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('maintop3')) {?>
-				<div id="maintop3" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop3" style="xhtml" /> </div><?php } ?>
+				<div id="maintop3" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop3" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('maintop4')) {?>
-				<div id="maintop4" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop4" style="xhtml" /> </div><?php } ?>              </div> <!-- /maintop -->
+				<div id="maintop4" class="<?php echo $maintopmodwidth ?>" ><jdoc:include type="modules" name="maintop4" style="galerijastyle" /> </div><?php } ?>              </div> <!-- /maintop -->
               <?php endif; ?>
               
               <!-- content -->
@@ -90,13 +90,13 @@ require_once('snippet/main.php');
               	
                 <?php if($this->countModules('left')) : ?>
               	<div id="left" class="col-md-4">
-                	<jdoc:include type="modules" name="left" style="xhtml" />
+                	<jdoc:include type="modules" name="left" style="galerijastyle" />
                 </div>
                 <?php endif; ?>
                 
               	<div id="content" class="box col-md-<?php echo $contentwidth; ?>">
                 	<?php if($this->countModules('contenttop')) : ?>
-                	<jdoc:include type="modules" name="contenttop" style="xhtml" />
+                	<jdoc:include type="modules" name="contenttop" style="galerijastyle" />
                     <?php endif; ?>
                     
                     <div id="component">
@@ -106,13 +106,13 @@ require_once('snippet/main.php');
                     </div>
                     
                     <?php if($this->countModules('contentbottom')) : ?>
-                    <jdoc:include type="modules" name="contentbottom" style="xhtml" />
+                    <jdoc:include type="modules" name="contentbottom" style="galerijastyle" />
                     <?php endif; ?>
                 </div>
                 
                 <?php if($this->countModules('right')) : ?>
               	<div id="right" class="col-md-4">
-                	<jdoc:include type="modules" name="right" style="xhtml" />
+                	<jdoc:include type="modules" name="right" style="galerijastyle" />
                 </div>
                 <?php endif; ?>
                 
@@ -122,13 +122,13 @@ require_once('snippet/main.php');
               <?php if ($this->countModules( 'mainbottom1 or mainbottom2 or mainbottom3 or mainbottom4' )) : ?>  
               <div class="mainbottom row">
 				<?php if ($this->countModules('mainbottom1')) {?>
-				<div id="mainbottom1" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom1" style="xhtml" /> </div><?php } ?>
+				<div id="mainbottom1" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom1" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('mainbottom2')) {?>
-				<div id="mainbottom2" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom2" style="xhtml" /> </div><?php } ?>
+				<div id="mainbottom2" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom2" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('mainbottom3')) {?>
-				<div id="mainbottom3" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom3" style="xhtml" /> </div><?php } ?>
+				<div id="mainbottom3" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom3" style="galerijastyle" /> </div><?php } ?>
 				<?php if ($this->countModules('mainbottom4')) {?>
-				<div id="mainbottom4" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom4" style="xhtml" /> </div><?php } ?>              </div> <!-- /mainbottom -->
+				<div id="mainbottom4" class="<?php echo $mainbottommodwidth ?>" ><jdoc:include type="modules" name="mainbottom4" style="galerijastyle" /> </div><?php } ?>              </div> <!-- /mainbottom -->
               <?php endif; ?>              
         
               <div class="footer row">
