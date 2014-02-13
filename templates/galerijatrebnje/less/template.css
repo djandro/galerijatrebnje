@@ -6416,7 +6416,7 @@ body {
 .moduletable h3 {
   font-size: 14px;
   text-transform: uppercase;
-  background-color: #005496;
+  background: url('../images/module-bg.png') no-repeat top right;
   color: #fff;
   width: 100%;
   padding: 6px 20px;
@@ -6428,6 +6428,26 @@ body {
 .box .modulcontent,
 .moduletable .modulcontent {
   padding-top: 40px;
+}
+.box.icon h3,
+.moduletable.icon h3 {
+  padding: 6px 20px 6px 35px;
+}
+.box.icon.koledar h3,
+.moduletable.icon.koledar h3 {
+  background: url('../images/ikona_koledar.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
+}
+.box.icon.dogodki h3,
+.moduletable.icon.dogodki h3 {
+  background: url('../images/ikona_dogodki.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
+}
+.box.icon.fotogalerije h3,
+.moduletable.icon.fotogalerije h3 {
+  background: url('../images/ikona_fotografije.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
+}
+.box.icon.kontakti h3,
+.moduletable.icon.kontakti h3 {
+  background: url('../images/ikona_kontakti.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
 }
 #component {
   padding: 0px 15px 15px;

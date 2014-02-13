@@ -13,6 +13,7 @@
 @bg-box-color:		#fff;
 @gutter:			15px;
 @moduleRadius:		10px;
+@module-bg:			url('../images/module-bg.png') no-repeat top right;
 
 /* GALERIJATREBNJE LESS
 *********************************************/
@@ -113,7 +114,7 @@ body {
 	h3{
 		font-size:14px;
 		text-transform:uppercase;
-		background-color: @projectColor1;
+		background: @module-bg;
 		color:#fff;
 		width:100%;
 		padding:6px 20px;
@@ -123,6 +124,26 @@ body {
 		border-top-right-radius:@moduleRadius;
 	}
 	.modulcontent{ padding-top:40px; }
+	
+	 &.icon{
+		h3{
+			padding:6px 20px 6px 35px; 
+		}
+		 
+		&.koledar h3{
+			background: url('../images/ikona_koledar.png') no-repeat 10px 49%, @module-bg;		
+		}
+		&.dogodki h3{
+			background: url('../images/ikona_dogodki.png') no-repeat 10px 49%, @module-bg;		
+		}
+		&.fotogalerije h3{
+			background: url('../images/ikona_fotografije.png') no-repeat 10px 49%, @module-bg;		
+		}
+		&.kontakti h3{
+			background: url('../images/ikona_kontakti.png') no-repeat 10px 49%, @module-bg;		
+		}	
+	}
+
 }
 
 #component { padding: 0px @gutter @gutter; }
