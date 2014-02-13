@@ -101,6 +101,7 @@ body {
 	.box-shadow(4px 4px 5px #888888);
 }
 .box, .moduletable{
+	min-height:215px;
 	background-color: @bg-box-color;
 	.box-sizing(border-box);
 	padding: 0px @gutter @gutter;
@@ -123,6 +124,8 @@ body {
 	}
 	.modulcontent{ padding-top:40px; }
 }
+
+#component { padding: 0px @gutter @gutter; }
 
 #left .modulewrapper{ margin-right: @gutter; }
 #right .modulewrapper{ margin-left: @gutter; }

@@ -6399,6 +6399,7 @@ body {
 }
 .box,
 .moduletable {
+  min-height: 215px;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6427,6 +6428,9 @@ body {
 .box .modulcontent,
 .moduletable .modulcontent {
   padding-top: 40px;
+}
+#component {
+  padding: 0px 15px 15px;
 }
 #left .modulewrapper {
   margin-right: 15px;
