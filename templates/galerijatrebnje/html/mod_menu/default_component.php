@@ -34,6 +34,10 @@ if ($item->menu_image) {
 		$linktype = '<img src="'.$item->menu_image.'" alt="'.$item->title.'" />';
 }
 
+if($item->parent) { 
+	$class = $class . ' data-toggle="dropdown"'; 
+	$linktype .= ' <b class="caret"></b>'; 
+}
 
 switch ($item->browserNav) :
 	default:

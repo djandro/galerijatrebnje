@@ -14,7 +14,6 @@ $class = $item->anchor_css ? 'class="'.$item->anchor_css.'" ' : '';
 $title = $item->anchor_title ? 'title="'.$item->anchor_title.'" ' : '';
 $scroll="";
 
-
 $arraytitle = explode("||",$item->title);
 if(count($arraytitle)>1){
 	$item->title=$arraytitle[1];
@@ -43,10 +42,15 @@ if ($item->menu_image) {
 $flink = $item->flink;
 $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
 
+if($item->parent) { 
+	$class = $class . ' data-toggle="dropdown"'; 
+	$linktype .= ' <b class="caret"></b>'; 
+}
+
 switch ($item->browserNav) :
 	default:
 	case 0:
-		?><a <?php echo $class; ?>href="<?php echo $flink; ?>" <?php echo $title; ?> <?php echo $scroll; ?>><span><?php echo $linktype; ?></span></a><?php
+		?><a <?php echo $class; ?> href="<?php echo $flink; ?>" <?php echo $title; ?> <?php echo $scroll; ?>><span><?php echo $linktype; ?></span></a><?php
 		break;
 	case 1:
 		// _blank

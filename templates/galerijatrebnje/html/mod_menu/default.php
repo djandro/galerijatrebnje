@@ -20,7 +20,7 @@ for($j=count($list); $j>0; $j--){
 $first_start = true;
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav nav-pills menu<?php echo $class_sfx;?>"<?php
+<ul class="nav nav-pills nav-justified menu<?php echo $class_sfx;?>"<?php
 	$tag = '';
 	if ($params->get('tag_id') != null)
 	{
@@ -75,7 +75,7 @@ foreach ($list as $i => &$item) :
 
 	if ($item->parent)
 	{
-		$class .= ' parent';
+		$class .= ' dropdown';
 	}
 
 	if (!empty($class))
@@ -102,7 +102,7 @@ foreach ($list as $i => &$item) :
 	// The next item is deeper.
 	if ($item->deeper)
 	{
-		echo '<ul class="nav-child unstyled small">';
+		echo '<ul class="dropdown-menu">';
 	}
 	// The next item is shallower.
 	elseif ($item->shallower)
