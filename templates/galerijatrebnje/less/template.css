@@ -3236,6 +3236,9 @@ input[type="button"].btn-block {
 .dropdown {
   position: relative;
 }
+.nav-galerija .dropdown {
+  position: static!important;
+}
 .dropdown-toggle:focus {
   outline: 0;
 }
@@ -3258,6 +3261,34 @@ input[type="button"].btn-block {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
+}
+.dropdown-menu.dropdown-galerija {
+  top: 220%;
+  left: 0px;
+  max-width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: none;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.dropdown-menu.dropdown-galerija > li {
+  display: inline!important;
+  padding: 0px;
+}
+.dropdown-menu.dropdown-galerija > li + li::before {
+  content: "|";
+  color: #fff;
+  padding: 0px 5px;
+}
+.dropdown-menu.dropdown-galerija > li > a {
+  color: #fff;
+  display: inline;
+  padding: 3px 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -3284,6 +3315,12 @@ input[type="button"].btn-block {
   color: #262626;
   background-color: #f5f5f5;
 }
+.dropdown-galerija > li > a:hover,
+.dropdown-galerija > li > a:focus {
+  text-decoration: underline;
+  color: #fff;
+  background-color: transparent;
+}
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
@@ -3307,6 +3344,9 @@ input[type="button"].btn-block {
 }
 .open > .dropdown-menu {
   display: block;
+}
+.open > .dropdown-galerija {
+  display: inline-flex;
 }
 .open > a {
   outline: 0;
@@ -3717,6 +3757,36 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .nav:after {
   clear: both;
+}
+.nav.nav-galerija {
+  position: relative;
+}
+.nav.nav-galerija > li {
+  position: static;
+}
+.nav.nav-galerija > li + li::before {
+  content: "|";
+  color: #005496;
+  font-weight: bold;
+  padding: 0px 6px;
+}
+.nav.nav-galerija > li > a {
+  padding: 10px 5px;
+  font-size: 12px;
+  display: inline;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+.nav.nav-galerija > li > a:hover,
+.nav.nav-galerija > li > a:focus {
+  color: #fff;
+  background-color: #005496;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.nav.nav-galerija > li.dropdown.open > a {
+  padding-bottom: 47px;
 }
 .nav > li {
   position: relative;
@@ -6300,7 +6370,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: #e9e2d6 url(../images/bg-big.jpg) fixed center center;
+  background: #e9e2d6 url(../images/bg-big-1.jpg) fixed center center;
 }
 /* LAYOUT
 *********************************************/
@@ -6319,6 +6389,7 @@ body {
   color: #005496;
   letter-spacing: 3.5px;
   text-align: center;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 .heading a:hover {
@@ -6328,19 +6399,19 @@ body {
 #logo {
   position: absolute;
   left: 35px;
-  top: 15px;
+  top: 11px;
 }
 #logo img {
   max-width: 115px;
 }
 .krivulja {
-  width: 1133px;
-  height: 53px;
-  background: url(../images/krivulja.png) no-repeat bottom center;
+  width: 1200px;
+  height: 56px;
+  background: url(../images/krivulja-2.png) no-repeat bottom center;
   position: absolute;
   z-index: 3;
-  top: 145px;
-  left: 3%;
+  top: 135px;
+  left: 1%;
 }
 .copic {
   width: 157px;
@@ -6348,8 +6419,8 @@ body {
   background: url(../images/copic.png) center center no-repeat;
   position: absolute;
   z-index: 3;
-  top: 22px;
-  right: 3%;
+  top: 16px;
+  right: 0%;
 }
 .top {
   padding-top: 10px;
@@ -6383,15 +6454,7 @@ body {
   margin-bottom: 25px;
 }
 #menu {
-  min-height: 76px;
-}
-.nav li > a span {
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: bold;
-}
-.nav li > a {
-  padding: 10px 4.8px;
+  min-height: 70px;
 }
 .shadow {
   -webkit-box-shadow: 4px 4px 5px #888888;
@@ -6428,6 +6491,11 @@ body {
 .box .modulcontent,
 .moduletable .modulcontent {
   padding-top: 40px;
+}
+.box.gray h3,
+.moduletable.gray h3 {
+  color: #005496;
+  background: url('../images/module-bg-gray-1.png') no-repeat top right;
 }
 .box.icon h3,
 .moduletable.icon h3 {
@@ -6467,10 +6535,18 @@ body {
   margin-left: 0px;
 }
 .footer {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   color: #005496;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
   margin: 20px 0px;
+}
+.footer .support,
+.footer .support .col-md-4 {
+  padding: 0px;
+}
+.footer .social-icon span {
+  padding-right: 5px;
 }
 /* mod-language */
 div.mod-languages ul {

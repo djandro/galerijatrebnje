@@ -20,6 +20,8 @@
   position: relative;
 }
 
+.nav-galerija .dropdown{ position:static!important; }
+
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
   outline: 0;
@@ -44,6 +46,36 @@
   border-radius: @border-radius-base;
   .box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
+
+  &.dropdown-galerija{
+  	top:220%;
+	left:0px;
+	max-width:100%;
+	padding:0px;
+	margin:0px;
+	border:none;
+	background: none;
+	.box-shadow(0 0 0 rgba(0,0,0,.0));
+	
+	> li{
+		display: inline!important;
+		padding:0px;
+	}
+	> li + li::before{
+		content:"|";
+		color: #fff;
+		padding:0px 5px;
+	}
+	> li > a {
+		color: #fff;
+		display:inline;
+		padding:3px 5px;
+		font-size:12px;
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+  }
+
 
   // Aligns the dropdown menu to right
   &.pull-right {
@@ -76,6 +108,14 @@
     color: @dropdown-link-hover-color;
     background-color: @dropdown-link-hover-bg;
   }
+}
+.dropdown-galerija > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #fff;
+    background-color: transparent;
+  }  
 }
 
 // Active state
@@ -118,6 +158,9 @@
   // Show the menu
   > .dropdown-menu {
     display: block;
+  }
+  > .dropdown-galerija{
+  	display: inline-flex;
   }
 
   // Remove the outline when :focus is triggered

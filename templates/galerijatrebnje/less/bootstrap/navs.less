@@ -11,7 +11,37 @@
   padding-left: 0; // Override default ul/ol
   list-style: none;
   .clearfix();
+	
+	&.nav-galerija{
+		position:relative;
+		
+		> li{ position:static; }
+		
+		> li + li::before{ 
+			content:"|";
+			color:@projectColor;
+			font-weight:bold;
+			padding: 0px 6px;
+		}
+		
+		> li > a{ 
+		  padding:10px 5px;
+		  font-size:12px;
+		  display: inline;
+		  text-transform:uppercase;
+		  text-shadow: 1px 1px 0px rgba(255,255,255,0.30);
+		  font-weight:bold;	  
 
+		  &:hover,
+		  &:focus {
+			color:#fff;
+			background-color: @projectColor;
+			.transition(all .1s linear);
+		  }	
+		}
+		> li.dropdown.open > a{ padding-bottom:47px; }
+	}
+	
   > li {
     position: relative;
     display: block;
@@ -25,6 +55,7 @@
         text-decoration: none;
         background-color: @nav-link-hover-bg;
       }
+	  	  
     }
 
     // Disabled state sets text to gray and nukes hover/tab effects

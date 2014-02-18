@@ -132,21 +132,23 @@ require_once('snippet/main.php');
               <?php endif; ?>              
         
               <div class="footer row">
-              	<div class="col-md-4 row-fluid">
-                	<div class="col-md-5">
+              	<div class="col-md-4 row-fluid support">
+                	<div class="col-md-4">
                 	Delovanje nam omogočajo
                     </div>
-                    <div class="col-md-7">
-                    <a href="http://www.trebnje.si" class="pecat obcina" target="_blank"><img src="/images/trebnje.png" title="Občina Trebnje" alt="obcina trebnje"/></a> 
-                    <a href="http://www.ciktrebnje.si" class="pecat cik" target="_blank"><img src="/images/ciktrebnje.png" title="CIK Trebnje" alt="cik trebnje"/></a>     
-                    </div>               
+                    <div class="col-md-3">
+                    <a href="http://www.trebnje.si" class="pecat obcina" target="_blank"><img src="/images/trebnje.png" title="Občina Trebnje" alt="obcina trebnje"/></a>
+                    </div>
+                    <div class="col-md-3">
+                    <a href="http://www.ciktrebnje.si" class="pecat cik" target="_blank"><img src="/images/ciktrebnje.png" title="CIK Trebnje" alt="cik trebnje"/></a>
+                    </div>              
                 </div>
               	<div class="col-md-4">
                 	<p>&copy; Galerija likovnih samorastnikov Trebnje 2014<br/>
                     	Vse pravice pridržane.</p>
                 </div>
-              	<div class="col-md-4">
-                	Poiščite nas tudi 
+              	<div class="col-md-4 social-icon">
+                	<span>Poiščite nas tudi</span> 
                     <a href="https://www.facebook.com/galerija.trebnje?fref=ts" class="icon fb" target="_blank"><img src="/images/facebook.png" alt="fbicon"/></a> 
                     <a href="https://www.youtube.com/channel/UC3Wh496w8-vlNCGeRg7axPA?feature=watch" class="icon youtube" target="_blank"><img src="/images/youtube.png" alt="youtubeicon"/></a>
                 </div>

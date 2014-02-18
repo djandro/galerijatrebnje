@@ -14,6 +14,7 @@
 @gutter:			15px;
 @moduleRadius:		10px;
 @module-bg:			url('../images/module-bg.png') no-repeat top right;
+@module-bg-gray:	url('../images/module-bg-gray-1.png') no-repeat top right;
 
 /* GALERIJATREBNJE LESS
 *********************************************/
@@ -21,10 +22,8 @@ html {
   overflow-y: scroll;
 }
 body {
-	background:#e9e2d6 url(../images/bg-big.jpg) fixed center center;
+	background:#e9e2d6 url(../images/bg-big-1.jpg) fixed center center;
 }
-
-
 
 /* LAYOUT
 *********************************************/
@@ -41,6 +40,7 @@ body {
 	color:@projectColor1;
 	letter-spacing:3.5px;
 	text-align:center;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.30);
 	font-weight:bold;
 	
 	a:hover{
@@ -51,24 +51,24 @@ body {
 #logo{
 	position:absolute;
 	left:35px;
-	top:15px;
+	top:11px;
 	img{ max-width:115px; }
 }
 .krivulja{
-	.size(1133px; 53px);
-	background:url(../images/krivulja.png) no-repeat bottom center;
+	.size(1200px; 56px);
+	background:url(../images/krivulja-2.png) no-repeat bottom center;
 	position:absolute;
 	z-index:3;
-	top:145px;
-	left:3%;
+	top:135px;
+	left:1%;
 }
 .copic{
 	.size(157px; 160px);
 	background:url(../images/copic.png) center center no-repeat;
 	position:absolute;
 	z-index:3;
-	top:22px;
-	right:3%;
+	top:16px;
+	right:0%;
 }
 .top{ padding-top:10px; }
 #topright{
@@ -88,16 +88,7 @@ body {
 }
 #slider{ margin-bottom:@gutter + 10; }
 #menu{
-	min-height:76px;
-}
-.nav{
-	
-	li > a span{ 
-		text-transform:uppercase;
-		font-size:13px;
-		font-weight:bold; 
-	}
-	li > a{ padding:10px 4.8px; }
+	min-height:70px;
 }
 .shadow{
 	.box-shadow(4px 4px 5px #888888);
@@ -125,6 +116,13 @@ body {
 		border-top-right-radius:@moduleRadius;
 	}
 	.modulcontent{ padding-top:40px; }
+	
+	&.gray{
+		h3{
+			color:@projectColor;
+			background: @module-bg-gray;
+		}
+	}
 	
 	 &.icon{
 		h3{
@@ -161,10 +159,14 @@ body {
 }
 
 .footer{
-	font-size:12px;
+	font-size:11px;
 	font-weight:bold;
 	color:@projectColor1;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.10);
 	margin:20px 0px;
+	
+	.support, .support .col-md-4{ padding:0px; }
+	.social-icon span { padding-right:5px; }
 }
 
 
