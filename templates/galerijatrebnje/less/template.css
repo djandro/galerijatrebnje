@@ -4870,15 +4870,18 @@ a.thumbnail.active {
 .alert-warning .alert-link {
   color: #66512c;
 }
-.alert-danger {
+.alert-danger,
+.alert-error {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
 }
-.alert-danger hr {
+.alert-danger hr,
+.alert-error hr {
   border-top-color: #e4b9c0;
 }
-.alert-danger .alert-link {
+.alert-danger .alert-link,
+.alert-error .alert-link {
   color: #843534;
 }
 @-webkit-keyframes progress-bar-stripes {
@@ -6456,6 +6459,9 @@ body {
 #menu {
   min-height: 70px;
 }
+.nav-galerija li.domov-hidden {
+  display: none;
+}
 .shadow {
   -webkit-box-shadow: 4px 4px 5px #888888;
   box-shadow: 4px 4px 5px #888888;
@@ -6505,6 +6511,11 @@ body {
 .moduletable.icon.koledar h3 {
   background: url('../images/ikona_koledar.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
 }
+.box.icon.dogodki,
+.moduletable.icon.dogodki {
+  min-height: 236px;
+  /* TODO da tega ne bo */
+}
 .box.icon.dogodki h3,
 .moduletable.icon.dogodki h3 {
   background: url('../images/ikona_dogodki.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
@@ -6518,13 +6529,29 @@ body {
   background: url('../images/ikona_kontakti.png') no-repeat 10px 49%, url('../images/module-bg.png') no-repeat top right;
 }
 #component {
+  min-height: 215px;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0px 15px 15px;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 5px #888888;
+  box-shadow: 4px 4px 5px #888888;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px 15px;
 }
 #left .modulewrapper {
   margin-right: 15px;
 }
 #right .modulewrapper {
   margin-left: 15px;
+}
+.header + .content #left .modulewrapper,
+.header + .content #right .modulewrapper {
+  margin-top: 16px;
 }
 .maintop .modulewrapper,
 .mainbottom .modulewrapper {

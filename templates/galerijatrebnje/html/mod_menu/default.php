@@ -31,6 +31,13 @@ $first_start = true;
 <?php
 foreach ($list as $i => &$item) :
 	$class = 'item-'.$item->id;
+
+	// za menu Domov da je hidden
+	if ($item->id == 121)
+	{
+		$class .= ' domov-hidden';
+	}	
+	
 	if ($item->id == $active_id)
 	{
 		$class .= ' current';

@@ -94,16 +94,21 @@ require_once('snippet/main.php');
                 </div>
                 <?php endif; ?>
                 
-              	<div id="content" class="box col-md-<?php echo $contentwidth; ?>">
+              	<div id="content" class="col-md-<?php echo $contentwidth; ?>">
                 	<?php if($this->countModules('contenttop')) : ?>
                 	<jdoc:include type="modules" name="contenttop" style="galerijastyle" />
                     <?php endif; ?>
+
+                    <jdoc:include type="modules" name="debug" />
+                    <jdoc:include type="message" />
                     
+                    
+                    <?php /* ZA domačo stran, DA JE componenta skrita in prikazani samo moduli --> slo = 121; en = 102 */ ?>
+                    <?php if ( !in_array($menu->getActive()->id, array(121, 102)) ): ?>
                     <div id="component">
-                        <jdoc:include type="modules" name="debug" />
-                        <jdoc:include type="message" />
                         <jdoc:include type="component" />
                     </div>
+                    <?php endif ?>
                     
                     <?php if($this->countModules('contentbottom')) : ?>
                     <jdoc:include type="modules" name="contentbottom" style="galerijastyle" />

@@ -90,10 +90,14 @@ body {
 #menu{
 	min-height:70px;
 }
+
+.nav-galerija li.domov-hidden{ display:none; }
+
 .shadow{
 	.box-shadow(4px 4px 5px #888888);
 }
-.box, .moduletable{
+
+.BOX-STYLE(){
 	min-height:215px;
 	background-color: @bg-box-color;
 	.box-sizing(border-box);
@@ -102,6 +106,10 @@ body {
 	.shadow;
 	.border-right-radius(@moduleRadius);
 	.border-bottom-radius(@moduleRadius);
+}
+
+.box, .moduletable{
+	.BOX-STYLE();
 	
 	h3{
 		font-size:14px;
@@ -132,6 +140,7 @@ body {
 		&.koledar h3{
 			background: url('../images/ikona_koledar.png') no-repeat 10px 49%, @module-bg;		
 		}
+		&.dogodki { min-height:236px; /* TODO da tega ne bo */ }
 		&.dogodki h3{
 			background: url('../images/ikona_dogodki.png') no-repeat 10px 49%, @module-bg;		
 		}
@@ -145,10 +154,18 @@ body {
 
 }
 
-#component { padding: 0px @gutter @gutter; }
+#component { 
+	.BOX-STYLE();
+	padding: @gutter - 5 @gutter; 
+}
 
 #left .modulewrapper{ margin-right: @gutter; }
 #right .modulewrapper{ margin-left: @gutter; }
+
+.header + .content #left .modulewrapper,
+.header + .content #right .modulewrapper{
+	margin-top: 16px;
+}
 
 .maintop, .mainbottom{
 	.modulewrapper{ margin: @gutter 0px @gutter @gutter; }
